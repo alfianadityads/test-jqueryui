@@ -37,6 +37,10 @@ public class DraggablePage {
     @FindBy(xpath = "//*[@id=\"content\"]/iframe")
     private WebElement boxFrame;
 
+    // select droppable menu
+    @FindBy(xpath = "//a[.='Droppable']")
+    private WebElement droppableMenu;
+
     // ========================================
 
     // verify jquery page
@@ -57,5 +61,10 @@ public class DraggablePage {
     // drag and drop object
     public void dragAndDropObject() {
         actions.dragAndDrop(boxFrame, draggableObject);
+    }
+
+    // click droppable menu
+    public void clickDroppableMenu() {
+        droppableMenu.click();
     }
 }
