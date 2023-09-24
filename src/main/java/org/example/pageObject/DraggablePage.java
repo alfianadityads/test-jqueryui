@@ -17,6 +17,10 @@ public class DraggablePage {
 
     }
 
+    // select jquery title on landing page
+    @FindBy(xpath = "//a[@href='/']")
+    private WebElement jqueryTitle;
+
     // Select draggable menu element
     @FindBy(xpath = "//a[.='Draggable']")
     private WebElement draggableMenu;
@@ -34,6 +38,11 @@ public class DraggablePage {
     private WebElement boxFrame;
 
     // ========================================
+
+    // verify jquery page
+    public boolean verifyJqueryPage() {
+        return jqueryTitle.isDisplayed();
+    }
 
     // Click draggable menu
     public void clickDraggableMenu() {
