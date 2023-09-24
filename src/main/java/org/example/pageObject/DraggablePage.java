@@ -29,6 +29,10 @@ public class DraggablePage {
     @FindBy(xpath = "//div[@id='draggable']")
     private WebElement draggableObject;
 
+    // select box frame
+    @FindBy(xpath = "//*[@id=\"content\"]/iframe")
+    private WebElement boxFrame;
+
     // ========================================
 
     // Click draggable menu
@@ -43,6 +47,6 @@ public class DraggablePage {
 
     // drag and drop object
     public void dragAndDropObject() {
-        actions.dragAndDrop(draggableMenu, draggableObject);
+        actions.dragAndDrop(boxFrame, draggableObject);
     }
 }
